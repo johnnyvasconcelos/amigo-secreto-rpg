@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amigo Secreto do RPG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script src="./assets/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header-container">
+          <div class="title">
+            <span class="material-symbols-outlined">
+              featured_seasonal_and_gifts
+            </span>
+            Amigo Secreto do RPG
+          </div>
+          <span class="dark-mode">
+            <span class="material-symbols-outlined">bedtime</span>
+          </span>
+        </div>
+      </header>
+      <div class="main">
+        <aside>
+          <div class="aside-container">
+            <div class="aside-header">
+              <span class="material-symbols-outlined"> group </span>
+              <h3>Participantes</h3>
+            </div>
+            <div class="participantes">
+              <ol>
+                <li>
+                  <span class="number">1</span>
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="text">Alisson</span>
+                </li>
+                <li>
+                  <span class="number">2</span>
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="text">Emely</span>
+                </li>
+                <li>
+                  <span class="number">3</span>
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="text">Hugo</span>
+                </li>
+                <li>
+                  <span class="number">4</span>
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="text">João Pedro</span>
+                </li>
+                <li>
+                  <span class="number">5</span>
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="text">Johnny</span>
+                </li>
+                <li>
+                  <span class="number">6</span>
+                  <span class="material-symbols-outlined"> person </span>
+                  <span class="text">Ricardo</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </aside>
+        <main>
+          <div class="main-container">
+            <span class="material-symbols-outlined"> redeem </span>
+            <h1>Bora sortear!</h1>
+            <p>Descubra quem será seu amigo secreto RPG!</p>
+            <form method="get">
+              <label for="name">Qual seu nome?</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="input"
+                placeholder="Digite seu nome aqui..."
+              />
+              <button type="button" class="button">
+                <span class="material-symbols-outlined">wand_shine</span>
+                <span>Gerar Nome</span>
+              </button>
+              <p class="warn">
+                <span class="material-symbols-outlined">lock</span> Ninguém verá
+                seu resultado antes do sorteio.
+              </p>
+            </form>
+            <section class="suggestions">
+              <!-- gera 8 produtos dinamicamente -->
+              <h2>
+                <span class="material-symbols-outlined">favorite</span> Produtos
+                que talvez <span class="person">pessoa</span> goste!
+              </h2>
+              <p>São apenas sugestões de produtos!</p>
+              <div class="products">
+                <article class="product">
+                  <a class="image" href="#" target="_blank">
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5><a href="#" target="_blank">Camiseta RPG</a></h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                <article class="product">
+                  <a
+                    class="image"
+                    href="https://www.mirao.com.br/microfone-usb-tomate-mt-1061-podcast-gamer-mesa-preto.html?srsltid=AfmBOoqWzcyDkB8B6HebLcB0xyxEOTlDgwSNK6sCdiZGsrSZXHg9gSq8Pyc"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5>
+                    <a
+                      href="https://www.mirao.com.br/microfone-usb-tomate-mt-1061-podcast-gamer-mesa-preto.html?srsltid=AfmBOoqWzcyDkB8B6HebLcB0xyxEOTlDgwSNK6sCdiZGsrSZXHg9gSq8Pyc"
+                      target="_blank"
+                      >Microfone</a
+                    >
+                  </h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                <article class="product">
+                  <a
+                    class="image"
+                    href="https://shopee.com.br/product/411718420/21697975783?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTEcgAAAAw6Pr7quIpOJjeI3oLb94IK4bSN0qURGHRPsS4XA2hvVQq6AmBqvCdMlhK1wFGf2Rd50fAIB4rP7vNGb6tGz5toDNhkdM94RqDQkb-YKxALmgjBbJCLF_e9KhrCJiYtIlW2adgkU3xdVnHdlSp3RQ"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5>
+                    <a
+                      href="https://shopee.com.br/product/411718420/21697975783?gads_t_sig=gqRjZGVrxHCFomtpsTE0MjUxOnRzc19zZGtfa2V5omt20QABpGFsZ2_SAAAAZKNkZWvAomN0xEAAAAAMRvS3L9OTXdZ5FJNxILig8p7lQ7pNpXYtdZAbsM8MQrkGmzJ0eOQRwaQfuYgAF9FAqYvxRTQ9oVrOjPOJqmNpcGhlcnRleHTEcgAAAAw6Pr7quIpOJjeI3oLb94IK4bSN0qURGHRPsS4XA2hvVQq6AmBqvCdMlhK1wFGf2Rd50fAIB4rP7vNGb6tGz5toDNhkdM94RqDQkb-YKxALmgjBbJCLF_e9KhrCJiYtIlW2adgkU3xdVnHdlSp3RQ"
+                      target="_blank"
+                      >Pimenta com Leite</a
+                    >
+                  </h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                <article class="product">
+                  <a
+                    class="image"
+                    href="https://www.amazon.com.br/Energ%C3%A9tico-Red-Bull-Energy-Drink/dp/B07QVBZXYT?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1ZZFT5FULY4LN&th=1"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5>
+                    <a
+                      href="https://www.amazon.com.br/Energ%C3%A9tico-Red-Bull-Energy-Drink/dp/B07QVBZXYT?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1ZZFT5FULY4LN&th=1"
+                      target="_blank"
+                      >Energético</a
+                    >
+                  </h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                <article class="product">
+                  <a
+                    class="image"
+                    href="https://www.canelikas.com.br/produtos/caneca-xicara-macacada-macaquinhos-todos-macacos/?variant=1333638687&pf=mc&srsltid=AfmBOopah78_rNdFuCEoi0ZlYRnhFaWtr2a_d_7DTzMJ6usKhGqYsZiAbIM"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5>
+                    <a
+                      href="https://www.canelikas.com.br/produtos/caneca-xicara-macacada-macaquinhos-todos-macacos/?variant=1333638687&pf=mc&srsltid=AfmBOopah78_rNdFuCEoi0ZlYRnhFaWtr2a_d_7DTzMJ6usKhGqYsZiAbIM"
+                      target="_blank"
+                      >Caneca de Macaco</a
+                    >
+                  </h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                <article class="product">
+                  <a
+                    class="image"
+                    href="https://www.robertonogueiraleiloes.com.br/peca.asp?ID=22696081"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5>
+                    <a
+                      href="https://www.robertonogueiraleiloes.com.br/peca.asp?ID=22696081"
+                      target="_blank"
+                      >Livro AD&D</a
+                    >
+                  </h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                <article class="product">
+                  <a
+                    class="image"
+                    href="https://www.loaded.com/pt_pt/the-elder-scrolls-v-5-skyrim-pc-triple-pack-dlc-steam-cd-key?channable=4179b169640054455356534b50435450444c439d&__currency=brl&srsltid=AfmBOooudCzgnLEucX3TAwta37jqD55RxbpuLxeCgjAeyueZY8P8lh_Xlas"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/product.webp" alt="product" />
+                  </a>
+                  <h5>
+                    <a
+                      href="https://www.loaded.com/pt_pt/the-elder-scrolls-v-5-skyrim-pc-triple-pack-dlc-steam-cd-key?channable=4179b169640054455356534b50435450444c439d&__currency=brl&srsltid=AfmBOooudCzgnLEucX3TAwta37jqD55RxbpuLxeCgjAeyueZY8P8lh_Xlas"
+                      target="_blank"
+                      >Skyrim (PC)</a
+                    >
+                  </h5>
+                  <div class="price">R$ 90,00</div>
+                </article>
+                Cueca:
+                https://www.amazon.com.br/Cuecas-divertidas-presentes-homens-adultos/dp/B0GJBLJNZT
+                Cantil:
+                https://www.amazon.com.br/Cantil-Campanha-Militar-900ml-Verde/dp/B0GMLPTFJS/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9.-lUH0LIMJKNl2HHcGkZud0LzzsKuOQUKuyjv10m88RefqZ6GPFrosYjnbHziVr4kKs_wX_4jVqAks98QMIaWUrTgAlA0I5X9s5M0APTXpA7KaHhaV0JxbqJtnFDtLc0OULZzP2kW6_xQSiS9HubqZyQEdGiRNlvMXIakQCfTz4e_YXdrEC0LMykEvl3Zjwft8KV-tzVPZjgYiRrO2n2g98oYVBbijxjgtPUb1uxGhcd-VuEqdqkOw_pEQJNaGJCrDwGhoX6kEwSm9O6sBPIcttKGnc0G8-lxxPl6_6cHZhc.-Dlu96SIARRwCVoYF13IZwPZWT5GT7sMvV6loLWRYoc&dib_tag=se&keywords=cantil&qid=1776982441&sr=8-44&th=1
+                Hidratante:
+                https://www.amazon.com.br/Cetaphil-Lo%C3%A7%C3%A3o-Hidratante-59mL-Travel/dp/B0CKS3LM2R/ref=sr_1_30?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2E1ND714BQE6&dib=eyJ2IjoiMSJ9.vKHGWHIrEMfvOaEgq-iwH3Su8UmKTiFLfhNGAYUfJBQLVhnKpv07AOG08v6IJ8m38F4DAS0-qk9c3-J7m2yGwmxReDbovmgb70f26IASRYA7rX99knTInqDMnKNbPDvxhVTQMbFgfpztBE6AmIf6qH4VXg5Qq2kdjaPh9W6KQ5tvGl71S4sH4de_AfB1iM-grELOn5fGPtHNgaEStUyxPzQCF5VayUv1rTISLgMnR9yphkifPVFnzQ8JzRy4ZLX2hJT0ZpJQEvb7fKneeUZgmHz3Yh5tk0vrc95vIIQVX0k.7QEZhuuhCGylW72f0_febbbUza3t10sDtxvSIcUEFhM&dib_tag=se&keywords=hidratante+facial&qid=1776982635&refinements=p_36%3A3100-5800&rnid=16254006011&sprefix=hidratante+facia%2Caps%2C223&sr=8-30
+                Batom:
+                https://www.amazon.com.br/KIKO-Coloured-Hidratante-Colorido-Vanilla/dp/B0B42VMV9H/ref=sr_1_11?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3E7DZ9FIEJZ65&dib=eyJ2IjoiMSJ9.x6HOHCTjQ1XT_7LEvnY05F9TZozgkR3bualgEyMUQ_JzvHqxIS6RpNFXPV9jYsujhyNyZXQWUlyD6qjXriulc1PGPCtrNK9nmqvPGK6WrQr2rXXYKQPEK2NUDsxCpHfU0SvtwsuRx-OIKXDBlOKQKtANYAuTo-24jaFeSSoDWLBt4HzpLEc27LGh9LNBuK5u9S_LA_JNQSip3dX8GrOPJZe8Irc2WPAEFzWIAWyHGbjw0WViLrAoR0VhLMlrz5zYLCw7HBwygl3KyHc1Uuej2k-z3m53MKh3RmABcrxF1BE.m_HavgxK7mjWTnX_t3baslGPb5thDdnYtYASS7_sBZI&dib_tag=se&keywords=maquiagem&qid=1776982728&sprefix=maquiag%2Caps%2C233&sr=8-11
+                Mini-Cooper:
+                https://www.webmotors.com.br/comprar/mini/cooper/se-2p-eletrico/2-portas/2021-2022/67540305
+                Action Figure:
+                https://www.amazon.com.br/Realms-Premium-Figures-Female-Gal%C3%A1pagos/dp/B08BK7PTKJ
+                Camiseta Gatinho:
+                https://br.shein.com/ark/11692?goods_id=372554800&test=5051&url_from=adhub715354070&scene=1&pf=google&ad_type=DPA&language=pt-br&siteuid=br&version_bid=102311026,102310816,102353676,102310681&version_eid=100902896&landing_page_id=11692&ad_test_id=48875&requestId=olw-5nfbhr8m99y2&cid=22645211692&gad_source=1&skucode=I0mkh61pa81j5d&onelink=0/googlefeed_br&network=g&gad_campaignid=22645211692&gclid=CjwKCAjwhqfPBhBWEiwAZo196swlTqZavqNdDcZFEsG4NP9_A9WVqaUW12CvIe-zXMIrvU1Qq4RHsBoCkGUQAvD_BwE&adid=784695665463&tv_b=2&ismg=8a8af1c39b4aded2e6ce4a62809b595c5b4134ae781bd3ed3c9ff78882a1ceee_01_1776939426&geoid=9197935&gbraid=0AAAAADm0yO7r88gb5R2uga8CPDjfb1X7t&setid=191984069227&kwd=pla-2436554891411&currency=BRL&lang=pt
+                Camiseta God of War:
+                https://produto.mercadolivre.com.br/MLB-1215750028-camiseta-kratos-god-of-war-camisa-gamer-nerd-jogo-blusa-geek-_JM?matt_tool=18956390&utm_source=google_shopping&utm_medium=organic&attributes=COLOR_SECONDARY_COLOR%3AUHJldG8%3D%2CSIZE%3ATQ%3D%3D
+                Boneco Patolino:
+                https://www.mercadolivre.com.br/boneco-patolino-colecionavel-action-figure/up/MLBU3372275837
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <p>
+          Feito com
+          <span class="material-symbols-outlined">favorite</span>
+          para um momento especial!
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
