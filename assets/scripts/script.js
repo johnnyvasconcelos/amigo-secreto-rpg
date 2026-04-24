@@ -1,4 +1,25 @@
 import products from "./products.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDocs,
+  collection,
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "amigo-secreto-8426b.firebaseapp.com",
+  projectId: "amigo-secreto-8426b",
+  storageBucket: "amigo-secreto-8426b.firebasestorage.app",
+  messagingSenderId: "100630817127",
+  appId: "1:100630817127:web:df3c29954a0303f224a7c2",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 const darkButton = document.querySelector(".dark-mode");
 const button = document.querySelector(".button");
 const input = document.querySelector(".input");
@@ -78,6 +99,7 @@ const associations = [
     ],
   },
 ];
+
 const productsDiv = document.querySelector(".products");
 for (let i = 0; i < 7; i++) {
   productsDiv.innerHTML += `<article>
@@ -86,15 +108,18 @@ for (let i = 0; i < 7; i++) {
 <div class="price">R$ ${products[i].preco}</div>
 </article>`;
 }
+
 darkButton.addEventListener("click", () => {
   alert(
     "Fiquei com preguiça de fazer essa parte! Só escolhe o nome aí e fica de boa!",
   );
 });
+
 const h1 = document.querySelector(".h1-area");
 const loading = document.querySelector(".loading");
 const h_1 = h1.querySelector("h1");
 const li = document.querySelectorAll("li");
+
 for (let i = 0; i < li.length; i++) {
   li[i].addEventListener("click", () => {
     const currentName = li[i].querySelector(".text").textContent.toLowerCase();
@@ -108,33 +133,67 @@ for (let i = 0; i < li.length; i++) {
     filteredProducts.forEach((p) => {
       productsDiv.innerHTML += `
   <article>
-    <div class="image">
-      <a target="_blank" href="${p.link}">
-        <img src="./assets/images/${p.imagem}" />
-      </a>
-    </div>
-    <div class="name">
-      <a target="_blank" href="${p.link}">${p.nome}</a>
-    </div>
+    <div class="image"><a target="_blank" href="${p.link}"><img src="./assets/images/${p.imagem}" /></a></div>
+    <div class="name"><a target="_blank" href="${p.link}">${p.nome}</a></div>
     <div class="price">R$ ${p.preco}</div>
   </article>`;
     });
   });
 }
-button.addEventListener("click", () => {
-  if (!names.includes(input.value.toLowerCase())) {
+
+button.addEventListener("click", async () => {
+  const myName = input.value.toLowerCase().trim();
+
+  if (localStorage.getItem("jaSorteou") === "true") {
+    alert("Você já registrou o nome! Quieta o Rabo e compra o bagulho!");
+    return;
+  }
+
+  if (!names.includes(myName)) {
     al.innerHTML =
       "<span class='material-symbols-outlined'>warning</span> Coloque seu nome como está exibido na lateral!</span>";
     al.classList.add("alert");
   } else {
     al.classList.remove("alert");
-    al.innerHTML = `<span class='material-symbols-outlined'>lock</span> Gerando amigo secreto para ${input.value.toUpperCase()}...</span>`;
+    al.innerHTML = `<span class='material-symbols-outlined'>lock</span> Gerando amigo secreto para ${myName.toUpperCase()}...</span>`;
     h1.classList.add("none");
     loading.classList.remove("none");
-    setTimeout(() => {
+
+    try {
+      const querySnapshot = await getDocs(collection(db, "sorteios"));
+      const alreadyChosen = querySnapshot.docs.map((doc) => doc.id);
+
+      const availableOptions = names.filter(
+        (name) => name !== myName && !alreadyChosen.includes(name),
+      );
+
+      if (availableOptions.length === 0) {
+        alert("Ops! Parece que não há mais nomes disponíveis.");
+        h1.classList.remove("none");
+        loading.classList.add("none");
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * availableOptions.length);
+      const secretFriend = availableOptions[randomIndex];
+
+      await setDoc(doc(db, "sorteios", secretFriend), {
+        drawnBy: myName,
+        date: new Date(),
+      });
+
+      localStorage.setItem("jaSorteou", "true");
+
+      setTimeout(() => {
+        h1.classList.remove("none");
+        loading.classList.add("none");
+        h_1.innerHTML = `Parabéns! Seu amigo secreto é: <span style="color: orange;">${secretFriend.toUpperCase()}</span>!`;
+      }, 3000);
+    } catch (e) {
+      console.error("Erro:", e);
+      alert("Erro ao conectar com o banco.");
       h1.classList.remove("none");
       loading.classList.add("none");
-      h_1.innerHTML = `Parabéns! Seu amigo secreto é: <span style="color: orange;">JOÃO PEDRO</span>!`;
-    }, 3000);
+    }
   }
 });
