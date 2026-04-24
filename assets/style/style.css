@@ -107,6 +107,14 @@ ol li:hover {
   font-weight: 700;
 }
 
+.loading {
+  width: 100px;
+}
+
+.none {
+  display: none !important;
+}
+
 .number {
   border-radius: 50%;
   width: 26px;
@@ -130,6 +138,10 @@ ol li .material-symbols-outlined {
   align-items: center;
   justify-content: center;
   margin-right: 8px;
+}
+
+.h1-area .material-symbols-outlined {
+  font-size: 50px;
 }
 
 .main {
@@ -301,6 +313,11 @@ input:focus {
   border: 1px solid #22222e;
   border-radius: 10px;
   padding: 15px;
+  transition: 0.3s all ease-out;
+}
+
+.products article:hover {
+  transform: scale(105%);
 }
 
 .products article .image {
