@@ -321,11 +321,11 @@ input:focus {
 }
 
 .products article .image {
-  height: 75px;
+  height: 105px;
 }
 
 .products article .image img {
-  width: 50px;
+  width: 70px;
   margin-bottom: 8px;
 }
 

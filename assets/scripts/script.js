@@ -20,7 +20,7 @@ const associations = [
   {
     name: "hugo",
     products: [
-      "Camiseta RPG",
+      "Quadro Decorativo",
       "Camiseta God of War",
       "Camiseta Assassins Creed",
       "Caneca de Macaco",
@@ -46,11 +46,11 @@ const associations = [
     products: [
       "Boneco Patolino",
       "Pimenta com Leite",
-      "Capacete Cearense",
       "Skyrim",
       "Action Figures",
       "Carolina Reaper",
-      "Mighty Blade",
+      "Camiseta RPG",
+      "Capacete Cearense",
     ],
   },
   {
