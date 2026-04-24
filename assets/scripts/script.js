@@ -24,7 +24,7 @@ const darkButton = document.querySelector(".dark-mode");
 const button = document.querySelector(".button");
 const input = document.querySelector(".input");
 const al = document.querySelector(".warn");
-const names = ["johnny", "hugo", "joão pedro", "alisson", "ricardo", "emely"];
+const names = ["johnny", "hugo", "joão paulo", "alisson", "ricardo", "emely"];
 const associations = [
   {
     name: "johnny",
@@ -51,7 +51,7 @@ const associations = [
     ],
   },
   {
-    name: "joão pedro",
+    name: "joão paulo",
     products: [
       "Energético",
       "Camiseta Minecraft",
