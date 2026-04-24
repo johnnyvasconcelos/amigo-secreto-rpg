@@ -6,10 +6,10 @@ const products = [
     preco: "29,76",
   },
   {
-    nome: "Batom Top",
-    link: "https://www.amazon.com.br/KIKO-Coloured-Hidratante-Colorido-Vanilla/dp/B0B42VMV9H/ref=sr_1_11?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3E7DZ9FIEJZ65&dib=eyJ2IjoiMSJ9.x6HOHCTjQ1XT_7LEvnY05F9TZozgkR3bualgEyMUQ_JzvHqxIS6RpNFXPV9jYsujhyNyZXQWUlyD6qjXriulc1PGPCtrNK9nmqvPGK6WrQr2rXXYKQPEK2NUDsxCpHfU0SvtwsuRx-OIKXDBlOKQKtANYAuTo-24jaFeSSoDWLBt4HzpLEc27LGh9LNBuK5u9S_LA_JNQSip3dX8GrOPJZe8Irc2WPAEFzWIAWyHGbjw0WViLrAoR0VhLMlrz5zYLCw7HBwygl3KyHc1Uuej2k-z3m53MKh3RmABcrxF1BE.m_HavgxK7mjWTnX_t3baslGPb5thDdnYtYASS7_sBZI&dib_tag=se&keywords=maquiagem&qid=1776982728&sprefix=maquiag%2Caps%2C233&sr=8-11",
-    imagem: "batom.jpg",
-    preco: "59,00",
+    nome: "Pijama de Vaca",
+    link: "https://pt.aliexpress.com/item/1005009213843005.html?_randl_currency=BRL&_randl_shipto=BR&src=google&src=google&albch=shopping&acnt=248-630-5778&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&gclsrc=aw.ds&&albagn=888888&&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=pt1005009213843005&ds_e_product_merchant_id=554331784&ds_e_product_country=BR&ds_e_product_language=pt&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=22964111934&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=4&gad_campaignid=22964114355&gbraid=0AAAAACWaBwf4rWGe56odR6BOuTrxNxvmy&gclid=CjwKCAjwqazPBhALEiwAOuXqdNrfVpc-ajL6Rnp8WM7CptRhqQq9jS0IJVchzG7ccbugwWVQE96hqRoCOKoQAvD_BwE",
+    imagem: "pijama.webp",
+    preco: "55,00",
   },
   {
     nome: "Energético",

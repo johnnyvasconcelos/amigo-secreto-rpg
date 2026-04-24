@@ -90,7 +90,7 @@ const associations = [
     name: "emely",
     products: [
       "Hidratante",
-      "Batom Top",
+      "Pijama de Vaca",
       "Skin Care",
       "Camiseta Gatinho",
       "Kit Limpeza",
