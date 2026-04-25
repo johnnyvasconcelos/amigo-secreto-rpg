@@ -41,7 +41,7 @@ const associations = [
   {
     name: "hugo",
     products: [
-      "Quadro Decorativo",
+      "Quadro Cthulhu",
       "Camiseta God of War",
       "Camiseta Assassins Creed",
       "Caneca de Macaco",

@@ -211,10 +211,10 @@ const products = [
     preco: "39,99",
   },
   {
-    nome: "Quadro Decorativo",
-    link: "https://www.quadrorama.com.br/produto/cthulhu-smite-2/?utm_source=Google+Shopping&utm_medium=cpc&utm_campaign=Google+Shopping&gad_source=4&gad_campaignid=923045448&gbraid=0AAAAADLsMSYrKgC7Yvs2AOLWQKaH3MHsd&gclid=CjwKCAjwqazPBhALEiwAOuXqdGkbFMBn6lKLtuOgU7Ze1ObzHyWI-cGoHVidr8lHXTfEMF9XcObv5xoCbAEQAvD_BwE",
-    imagem: "quadro-decorativo.webp",
-    preco: "29,90",
+    nome: "Quadro Cthulhu",
+    link: "https://www.amazon.com.br/Quadro-Decorativo-Monstro-Terror-Cthulhu/dp/B0CHWNBPTD",
+    imagem: "quadro-decorativo.jpg",
+    preco: "45,90",
   },
   {
     nome: "Kit Dormir Bem",
